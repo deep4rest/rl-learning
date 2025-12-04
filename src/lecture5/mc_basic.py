@@ -10,7 +10,7 @@ def monte_carlo_basic(env, max_iterations=200, gamma=0.9, episode_length=50):
         :param env: GridWorld_deterministic 实例
         :param max_iterations: 迭代次数
         :param gamma: 折扣因子 Gamma
-        :param episode_length: 防止死循环的最大步数限制
+        :param episode_length: 每个 episode 的最大步长
         :return: (policy,value)
     """
 

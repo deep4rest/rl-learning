@@ -3,6 +3,8 @@ from src.env.Gridworld_deterministic import GridWorld_deterministic
 from src.lecture4.policy_iteration import policy_iteration
 from src.lecture4.Value_iteration import value_iteration
 from src.lecture5.mc_basic import monte_carlo_basic
+from src.lecture5.mc_es import monte_carlo_exploring_starts
+from src.lecture5.mc_epsilon_greedy import monte_carlo_es_epsilon_greedy
 
 if __name__ == "__main__":
 
@@ -29,10 +31,9 @@ if __name__ == "__main__":
 
     # 2. 调用算法函数
     print("\n====== 2. 算法运行 ======")
-    final_policy, final_value = monte_carlo_basic(
+    final_policy, final_value = monte_carlo_es_epsilon_greedy(
         env,
-        gamma=0.5,
-        episode_length=50,
+        gamma=0.9,
     )
 
     # 3. 展示最终结果
